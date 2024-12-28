@@ -11,7 +11,7 @@ body {
   justify-content: center;
   text-align: center;
   color: white;
-  background-image: url('../public/images/beach-back.jpg');
+  background-image: url('/public/images/beach-back.jpg');
   background-size: cover;
   background-position: center;
   height: 800px;
@@ -23,7 +23,7 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
-  background-image: url('../public/logo.png');
+  background-image: url('/public/logo.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
