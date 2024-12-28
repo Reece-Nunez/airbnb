@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Roboto', serif;
+  background-color: #f5f5f5;
+  color: #000000;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
   color: white;
+  background-image: url('../public/images/beach-back.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-image: url('../public/logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
 }
 
-@keyframes App-logo-spin {
+.header-tag-container {
+  background-color: rgba(184, 181, 181, 0.5);
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.header-tag {
+  font-family: "Alex Brush", serif;
+  font-size: 64px;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+.nav-bar {
+  margin-top: 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffdd93;
+}
+
+.main-content {
+  padding: 10px;
+  background-color: #5e8894;
+}
+
+.welcome {
+  font-size: 30px;
+}
+
+.review-slider {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.review {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  max-width: fit-content;
+  padding: 20px 30px;
+  border-radius: 8px;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+@keyframes slideIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(-50px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review-text {
+  font-size: 1.4em;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.review-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #555;
+}
+
+.review-property {
+  font-size: 1em;
+  color: #777;
+}
+
+.review-stars {
+  font-size: 1.2em;
+  color: #f5c518;
+}
+
+.star {
+  color: #ccc;
+  /* Default star color */
+}
+
+.star.filled {
+  color: #f5c518;
+  /* Filled star color */
+}
+
+.home {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.property-links {
+  margin-top: 20px;
+  margin-bottom: 10em;
+}
+
+.property-link {
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 12px 24px;
+  background-color: #5e8894;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.property-link:hover {
+  background-color: #74c2b4;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #000;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #eaeaea;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #5e8894;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: #74c2b4;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    height: 600px;
+    padding: 0 10px;
+  }
+
+  .header-tag-container {
+    padding: 15px 20px;
+  }
+
+  .header-tag {
+    font-size: 48px;
+  }
+
+  .review-slider {
+    width: 95%;
+  }
+
+  .gallery-image {
+    height: 300px;
   }
 }
