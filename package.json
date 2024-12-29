@@ -1,6 +1,6 @@
 {
   "name": "airbnb-website",
-  "homepage": "https://reece-nunez.github.io/airbnb",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
