@@ -5,6 +5,17 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
 import './CoastalCottage.css';
 
+import exteriorImage from '../assets/images/coastal-cottage-images/exterior (1).jpeg';
+import poolImage from '../assets/images/coastal-cottage-images/pool (1).jpeg';
+import patioImage from '../assets/images/coastal-cottage-images/patio (1).jpeg';
+import livingRoomImage from '../assets/images/coastal-cottage-images/living-room (1).jpeg';
+import kitchenImage from '../assets/images/coastal-cottage-images/kitchen (1).jpeg';
+import bedroom1Image from '../assets/images/coastal-cottage-images/bedroom1 (1).jpeg';
+import bedroom2Image from '../assets/images/coastal-cottage-images/bedroom2 (1).jpeg';
+import bathroom1Image from '../assets/images/coastal-cottage-images/bathroom1.jpeg';
+import bathroom2Image from '../assets/images/coastal-cottage-images/bathroom2 (1).jpeg';
+import backyardImage from '../assets/images/coastal-cottage-images/backyard (1).jpeg';
+
 function CoastalCottage() {
 
   const navigate = useNavigate();
@@ -15,16 +26,16 @@ function CoastalCottage() {
   };
 
   const images = [
-    '/images/coastal-cottage-images/exterior.jpeg',
-    '/images/coastal-cottage-images/pool.jpeg',
-    '/images/coastal-cottage-images/patio.jpeg',
-    '/images/coastal-cottage-images/living-room.jpeg',
-    '/images/coastal-cottage-images/kitchen.jpeg',
-    '/images/coastal-cottage-images/bedroom1.jpeg',
-    '/images/coastal-cottage-images/bedroom2.jpeg',
-    '/images/coastal-cottage-images/bathroom1.jpeg',
-    '/images/coastal-cottage-images/bathroom2.jpeg',
-    '/images/coastal-cottage-images/backyard.jpeg'
+    exteriorImage,
+    poolImage,
+    patioImage,
+    livingRoomImage,
+    kitchenImage,
+    bedroom1Image,
+    bedroom2Image,
+    bathroom1Image,
+    bathroom2Image,
+    backyardImage,
   ];
 
   const settings = {

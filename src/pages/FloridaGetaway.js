@@ -5,6 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
 
+import exteriorImage from '../assets/images/florida-getaway-images/exterior.jpeg';
+import poolImage from '../assets/images/florida-getaway-images/pool.jpeg';
+import patioImage from '../assets/images/florida-getaway-images/patio.jpeg';
+import livingRoomImage from '../assets/images/florida-getaway-images/living-room.jpeg';
+import kitchenImage from '../assets/images/florida-getaway-images/kitchen.jpeg';
+import diningImage from '../assets/images/florida-getaway-images/dining.jpeg';
+import bedroom1Image from '../assets/images/florida-getaway-images/bedroom1.jpeg';
+import bedroom2Image from '../assets/images/florida-getaway-images/bedroom2.jpeg';
+import bathroom1Image from '../assets/images/florida-getaway-images/bathroom1.jpeg';
+import bathroom2Image from '../assets/images/florida-getaway-images/bathroom2.jpeg';
+import backyardImage from '../assets/images/florida-getaway-images/backyard.jpeg';
+
 function FloridaGetaway() {
   const navigate = useNavigate();
 
@@ -13,18 +25,19 @@ function FloridaGetaway() {
     setTimeout(() => navigate('/'), 500);
   };
 
+
   const images = [
-    '/images/florida-getaway-images/exterior.jpeg',
-    '/images/florida-getaway-images/pool.jpeg',
-    '/images/florida-getaway-images/patio.jpeg',
-    '/images/florida-getaway-images/living-room.jpeg',
-    '/images/florida-getaway-images/kitchen.jpeg',
-    '/images/florida-getaway-images/dining.jpeg',
-    '/images/florida-getaway-images/bedroom1.jpeg',
-    '/images/florida-getaway-images/bedroom2.jpeg',
-    '/images/florida-getaway-images/bathroom1.jpeg',
-    '/images/florida-getaway-images/bathroom2.jpeg',
-    '/images/florida-getaway-images/backyard.jpeg'
+    exteriorImage,
+    poolImage,
+    patioImage,
+    livingRoomImage,
+    kitchenImage,
+    diningImage,
+    bedroom1Image,
+    bedroom2Image,
+    bathroom1Image,
+    bathroom2Image,
+    backyardImage,
   ];
 
   const settings = {

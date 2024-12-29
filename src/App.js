@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Slider from 'react-slick';
 import './App.css';
 import FloridaGetaway from './pages/FloridaGetaway';
 import CoastalCottage from './pages/CoastalCottage';
+import logo from './assets/images/logo.png';
+import arrowIcon from './assets/images/arrow.png';
 
 function App() {
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowArrow(true)
+      } else {
+        setShowArrow(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
   const reviews = [
     {
@@ -67,8 +83,25 @@ function App() {
   return (
     <Router basename='/'>
       <div className="App">
+        <Link
+          to="/"
+          className="logo"
+          onClick={(event) => {
+            event.preventDefault();
+            const topElement = document.documentElement;
+            topElement.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        >
+          <img src={logo} alt="Logo" />
+        </Link>
+        {showArrow && (
+          <div className="scroll-arrow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img src={arrowIcon} alt="Scroll to top" className="arrow-icon" />
+            <p>Back to Top</p>
+          </div>
+        )}
+
         <header className="App-header">
-          <div className='logo'></div>
           <div className='header-tag-container'>
             <h1 className='header-tag'>Our Home is Your Home!</h1>
           </div>
