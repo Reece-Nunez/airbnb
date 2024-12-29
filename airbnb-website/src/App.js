@@ -65,7 +65,7 @@ function App() {
   };
 
   return (
-    <Router basename='/airbnb'>
+    <Router basename='/'>
       <div className="App">
         <header className="App-header">
           <div className='logo'></div>
