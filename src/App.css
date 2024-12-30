@@ -4,6 +4,10 @@ body {
   color: #000000;
 }
 
+p {
+  margin-top: 0;
+}
+
 .scroll-arrow {
   position: fixed;
   top: 70px;
@@ -220,7 +224,7 @@ body {
 }
 
 .property-links {
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 10em;
 }
 
