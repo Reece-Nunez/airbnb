@@ -155,6 +155,7 @@ body {
   padding: 20px 30px;
   border-radius: 8px;
   animation: slideIn 0.8s ease-in-out;
+  font-size: 10px;
 }
 
 @keyframes slideIn {
