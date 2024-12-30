@@ -138,7 +138,7 @@ function App() {
         </main>
 
         <footer className="footer">
-          <p>© {new Date().getFullYear()} Lisa's Florida Vacation Homes. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Nunez Vacation Homes. All rights reserved.</p>
         </footer>
       </div>
     </Router>
