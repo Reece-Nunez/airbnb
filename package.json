@@ -6,13 +6,16 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "airbnb-website": "file:",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.3",
+    "settings": "^0.1.1",
     "slick-carousel": "^1.8.1",
+    "slider": "^1.0.4",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
