@@ -133,7 +133,7 @@ function App() {
           </nav>
         </div>
         <div className={`website-title ${isVisible ? "visible" : "hidden"}`}>
-          <h1>Nunez Vacation Rentals</h1>
+          <h1>Nunez Vacation Homes</h1>
         </div>
         <div className="right-logo">
           <Link
