@@ -423,6 +423,17 @@ h3 {
     padding: 0 10px;
   }
 
+  .website-title {
+    font-size: 1em;
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+
+  .website-title h1 {
+    font-size: 1em;
+    word-wrap: break-word;
+  }
+
   .header-tag-container {
     padding: 15px 20px;
   }
@@ -459,4 +470,100 @@ h3 {
   width: 500px;
   border-radius: 20px;
   height: 500px;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    height: 400px;
+    padding: 0 10px;
+  }
+
+  .website-title {
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .website-title h1 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  .header-tag-container {
+    padding: 10px;
+  }
+
+  .header-tag {
+    font-size: 32px;
+  }
+
+  .review-slider {
+    width: 100%;
+  }
+
+  .review {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+
+  .gallery-image {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .home {
+    max-width: 100%;
+  }
+
+  .description {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .florida-container,
+  .coastal-container {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .florida-getaway-image,
+  .coastal-cottage-image {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .property-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .property-link {
+    width: 80%;
+    font-size: 1em;
+    margin: 10px 0;
+  }
+
+  .navbar {
+    height: 60px;
+    padding: 10px;
+  }
+
+  .hamburger-menu {
+    width: 25px;
+    height: 25px;
+  }
+
+  .scroll-arrow {
+    top: 60px;
+    right: 10px;
+  }
+
+  .footer {
+    font-size: 0.8em;
+    padding: 10px 0;
+  }
 }
