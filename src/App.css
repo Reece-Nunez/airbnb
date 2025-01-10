@@ -388,7 +388,6 @@ h3 {
 
 .star.filled {
   color: #f5c518;
-  /* Filled star color */
 }
 
 .slick-list {
@@ -400,6 +399,15 @@ h3 {
   margin: 20px auto;
   max-width: 1000px;
 }
+
+.property-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
 
 
 .florida-container,
@@ -553,19 +561,7 @@ h3 {
     height: auto;
     border-radius: 12px;
   }
-
-  .property-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* Two columns */
-    gap: 40px;
-    margin: 0 auto;
-    max-width: 1000px;
-    margin-bottom: 5em;
-    align-items: start;
-    justify-items: center;
-  }
   
-
   .property-link {
     width: 80%;
     font-size: 1em;
