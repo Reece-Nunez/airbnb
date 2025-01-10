@@ -8,6 +8,7 @@ import logo from "./assets/images/logo.png";
 import arrowIcon from "./assets/images/arrow.png";
 import floridaGetawayImage from "./assets/images/florida-getaway-images/exterior.jpeg";
 import coastalCottageImage from "./assets/images/coastal-cottage-images/exterior (1).jpeg";
+import FadeInSection from "./components/FadeInSection";
 
 function App() {
   const navigate = useNavigate();
@@ -51,6 +52,17 @@ function App() {
   const handleNavigateHome = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setTimeout(() => navigate("/"), 500);
+  };
+
+  const scrollToProperties = () => {
+    navigate("/");
+
+    setTimeout(() => {
+      const target = document.getElementById("property-links");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 200);
   };
 
   const reviews = [
@@ -161,71 +173,96 @@ function App() {
       <header className="App-header">
         <div className="header-tag-container">
           <h1 className="header-tag">Your Home Away From Home</h1>
+          <button
+            className="hero-cta"
+            onClick={scrollToProperties}
+          >
+            Explore Our Rentals
+          </button>
         </div>
         <div className="header-background"></div>
       </header>
-      <main className="main-content">
-        <div className="description">
-          <p>
-            Welcome to your home away from home! Nestled in the beautiful
-            up-and-coming area of Port Charlotte, Florida. Located on the Gulf Coast,
-            just 25 minutes from the beach, you can enjoy the serenity without
-            the stress of overcrowded tourist destinations. Explore our two
-            stunning homes, conveniently located right in front of and behind
-            each other, making this the perfect spot for large family gatherings
-            and reunions. Take a dip in the pools at either location and bask in
-            all the relaxation you deserve, surrounded by the meticulous love
-            and care you’d expect in your own home.
-          </p>
-        </div>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <section className="home">
-                <div id="property-links" className="property-links">
-                  <div className="florida-container">
-                    <img
-                      className="florida-getaway-image"
-                      src={floridaGetawayImage}
-                    />
-                    <Link to="/florida-getaway" className="property-link">
-                      Florida Getaway
-                    </Link>
-                  </div>
-                  <div className="coastal-container">
-                    <img
-                      className="coastal-cottage-image"
-                      src={coastalCottageImage}
-                    />
-                    <Link to="/coastal-cottage" className="property-link">
-                      Coastal Cottage
-                    </Link>
-                  </div>
-                </div>
-              </section>
-            }
-          />
 
-          <Route path="/florida-getaway" element={<FloridaGetaway />} />
-          <Route path="/coastal-cottage" element={<CoastalCottage />} />
-        </Routes>
-        <h2 className="welcome">
-          Welcome To Your Gulf Coast Florida Vacation!
-        </h2>
-        <div className="reviews">
-          <h3>Guest Reviews:</h3>
-          <Slider {...settings} className="review-slider">
-            {reviews.map((review, index) => (
-              <div key={index} className="review">
-                <p className="review-text">"{review.text}"</p>
-                <p className="review-name">- {review.name}</p>
-                <p className="review-property">{review.property}</p>
-                <div className="review-stars">{renderStars(review.rating)}</div>
-              </div>
-            ))}
-          </Slider>
-        </div>
+      <main className="main-content">
+        <FadeInSection>
+          <section className="description-section">
+            <div className="description">
+              <p>
+                Welcome to your home away from home! Nestled in the beautiful
+                up-and-coming area of Port Charlotte, Florida. Located on the Gulf Coast,
+                just 25 minutes from the beach, you can enjoy the serenity without
+                the stress of overcrowded tourist destinations. Explore our two
+                stunning homes, conveniently located right in front of and behind
+                each other, making this the perfect spot for large family gatherings
+                and reunions. Take a dip in the pools at either location and bask in
+                all the relaxation you deserve, surrounded by the meticulous love
+                and care you’d expect in your own home.
+              </p>
+            </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section className="property-section">
+            <Routes>
+              <Route
+                path="/"
+                element={
+
+                  <FadeInSection>
+                    <section className="home">
+                      <div id="property-links" className="property-links">
+                        <div className="florida-container">
+                          <img
+                            className="florida-getaway-image"
+                            src={floridaGetawayImage}
+                          />
+                          <Link to="/florida-getaway" className="property-link">
+                            View Florida Getaway
+                          </Link>
+                        </div>
+                        <div className="coastal-container">
+                          <img
+                            className="coastal-cottage-image"
+                            src={coastalCottageImage}
+                          />
+                          <Link to="/coastal-cottage" className="property-link">
+                            View Coastal Cottage
+                          </Link>
+                        </div>
+                      </div>
+                    </section>
+                  </FadeInSection>
+
+                }
+              />
+              <Route path="/florida-getaway" element={<FloridaGetaway />} />
+              <Route path="/coastal-cottage" element={<CoastalCottage />} />
+            </Routes>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section className="reviews-section">
+            <h2 className="welcome">
+              Welcome To Your Gulf Coast Florida Vacation!
+            </h2>
+            <div className="reviews">
+              <h3>Guest Reviews:</h3>
+              <Slider {...settings} className="review-slider">
+                {reviews.map((review, index) => (
+                  <div key={index} className="review">
+                    <p className="review-text">"{review.text}"</p>
+                    <p className="review-name">- {review.name}</p>
+                    <p className="review-property">{review.property}</p>
+                    <div className="review-stars">{renderStars(review.rating)}</div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </section>
+        </FadeInSection>
+
       </main>
 
       <footer className="footer">
