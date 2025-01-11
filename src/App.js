@@ -9,6 +9,7 @@ import arrowIcon from "./assets/images/arrow.png";
 import floridaGetawayImage from "./assets/images/florida-getaway-images/exterior.jpeg";
 import coastalCottageImage from "./assets/images/coastal-cottage-images/exterior (1).jpeg";
 import FadeInSection from "./components/FadeInSection";
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 function App() {
   const navigate = useNavigate();
@@ -173,10 +174,7 @@ function App() {
       <header className="App-header">
         <div className="header-tag-container">
           <h1 className="header-tag">Your Home Away From Home</h1>
-          <button
-            className="hero-cta"
-            onClick={scrollToProperties}
-          >
+          <button className="hero-cta" onClick={scrollToProperties}>
             Explore Our Rentals
           </button>
         </div>
@@ -189,14 +187,15 @@ function App() {
             <div className="description">
               <p>
                 Welcome to your home away from home! Nestled in the beautiful
-                up-and-coming area of Port Charlotte, Florida. Located on the Gulf Coast,
-                just 25 minutes from the beach, you can enjoy the serenity without
-                the stress of overcrowded tourist destinations. Explore our two
-                stunning homes, conveniently located right in front of and behind
-                each other, making this the perfect spot for large family gatherings
-                and reunions. Take a dip in the pools at either location and bask in
-                all the relaxation you deserve, surrounded by the meticulous love
-                and care you’d expect in your own home.
+                up-and-coming area of Port Charlotte, Florida. Located on the
+                Gulf Coast, just 25 minutes from the beach, you can enjoy the
+                serenity without the stress of overcrowded tourist destinations.
+                Explore our two stunning homes, conveniently located right in
+                front of and behind each other, making this the perfect spot for
+                large family gatherings and reunions. Take a dip in the pools at
+                either location and bask in all the relaxation you deserve,
+                surrounded by the meticulous love and care you’d expect in your
+                own home.
               </p>
             </div>
           </section>
@@ -208,7 +207,6 @@ function App() {
               <Route
                 path="/"
                 element={
-
                   <FadeInSection>
                     <section className="home">
                       <div id="property-links" className="property-links">
@@ -233,7 +231,6 @@ function App() {
                       </div>
                     </section>
                   </FadeInSection>
-
                 }
               />
               <Route path="/florida-getaway" element={<FloridaGetaway />} />
@@ -255,21 +252,32 @@ function App() {
                     <p className="review-text">"{review.text}"</p>
                     <p className="review-name">- {review.name}</p>
                     <p className="review-property">{review.property}</p>
-                    <div className="review-stars">{renderStars(review.rating)}</div>
+                    <div className="review-stars">
+                      {renderStars(review.rating)}
+                    </div>
                   </div>
                 ))}
               </Slider>
             </div>
           </section>
         </FadeInSection>
-
       </main>
 
       <footer className="footer">
-        <p>
-          © {new Date().getFullYear()} Nunez Vacation Homes. All rights
-          reserved.
-        </p>
+        <div className="copyright">
+          <p>
+            © {new Date().getFullYear()} Nunez Vacation Homes. All rights
+            reserved.
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+      <a href="https://facebook.com/profile.php?id=61571860077453" target="_blank" rel="noopener noreferrer">
+        <FaFacebook size={32} color="#4267B2" />
+      </a>
+      <a href="https://instagram.com/nunezvacationhomes" target="_blank" rel="noopener noreferrer">
+        <FaInstagram size={32} color="#E1306C" />
+      </a>
+    </div>
       </footer>
     </div>
   );
