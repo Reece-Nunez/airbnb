@@ -1,11 +1,13 @@
 body {
-  font-family: 'Roboto', serif;
+  font-family: "Roboto", serif;
   background-color: #f5f5f5;
-  color: #2B7C80;
+  color: #2b7c80;
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
   color: #1d383f;
 }
 
@@ -30,7 +32,6 @@ p {
   opacity: 0;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
-
 
 /* Navbar Styling */
 .navbar {
@@ -109,17 +110,14 @@ p {
   left: 0;
 }
 
-
-
 .side-menu-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background: #D3BC9A;
+  background: #d3bc9a;
   color: white;
 }
-
 
 .side-menu-nav {
   display: flex;
@@ -172,7 +170,11 @@ p {
 
 /* Bouncing Animation */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -202,7 +204,7 @@ p {
   justify-content: center;
   text-align: center;
   color: white;
-  background-image: url('/public/images/beach-scene.jpg');
+  background-image: url("/public/images/beach-scene.jpg");
   background-size: cover;
   background-position: center;
   height: 800px;
@@ -226,17 +228,14 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-
 .header-tag {
   font-family: "Alex Brush", serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   font-size: 64px;
   color: rgb(0, 0, 0);
   margin: 0;
   font-size: 48px;
-
 }
-
 
 .nav-links {
   display: flex;
@@ -302,7 +301,6 @@ p {
   background-color: #f2e4d9; /* Alternate back to tan */
   padding: 40px 0;
 }
-
 
 .review-slider {
   margin: 40px auto;
@@ -375,11 +373,10 @@ h3 {
 }
 
 .review-stars {
-  font-size: 1.5em; 
+  font-size: 1.5em;
   color: #f5c518;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
-
 
 .star {
   color: #ccc;
@@ -408,14 +405,11 @@ h3 {
   gap: 10rem;
 }
 
-
-
 .florida-container,
 .coastal-container {
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 
 .property-link {
@@ -454,10 +448,6 @@ h3 {
 }
 
 @media (max-width: 768px) {
-  .App-header {
-    height: 600px;
-    padding: 0 10px;
-  }
 
   .website-title {
     font-size: 1em;
@@ -480,35 +470,30 @@ h3 {
   .gallery-image {
     height: 300px;
   }
-}
 
-.description {
-  display: block;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: center;
-  font-weight: 400;
-}
+  .description {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 400;
+  }
 
-.florida-getaway-image,
-.coastal-cottage-image {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-@media (max-width: 768px) {
+  .florida-getaway-image,
+  .coastal-cottage-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
   .App-header {
-    height: 400px;
-    padding: 0 10px;
+    height: 600px;
   }
 
   .website-title {
-    font-size: 1.2em;
     padding: 10px;
     text-align: left;
   }
@@ -557,11 +542,15 @@ h3 {
     height: auto;
     border-radius: 12px;
   }
-  
+
   .property-link {
     width: 80%;
     font-size: 1em;
     margin: 10px 0;
+  }
+
+  .property-links {
+    flex-wrap: wrap;
   }
 
   .navbar {
@@ -582,5 +571,7 @@ h3 {
   .footer {
     font-size: 0.8em;
     padding: 10px 0;
+    display: flex;
+    flex-direction: column;
   }
 }
